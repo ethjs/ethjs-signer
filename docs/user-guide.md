@@ -122,22 +122,20 @@ https://polyfill.io/
 ## Latest Webpack Figures
 
 ```
-Hash: ab378ace2dcbcdc84923                                                            
 Version: webpack 2.1.0-beta.15
-Time: 1041ms
-               Asset    Size  Chunks             Chunk Names
-    ethjs-signer.js  313 kB       0  [emitted]  main
-ethjs-signer.js.map  385 kB       0  [emitted]  main
-  [37] multi main 28 bytes {0} [built]
-    + 37 hidden modules
-
-Hash: f6b69ff438836239c7a6                                                            
+Time: 1756ms
+              Asset    Size  Chunks             Chunk Names
+    ethjs-signer.js  361 kB       0  [emitted]  main
+ethjs-signer.js.map  443 kB       0  [emitted]  main
+  [44] multi main 28 bytes {0} [built]
+    + 44 hidden modules
+                
 Version: webpack 2.1.0-beta.15
-Time: 4124ms
-               Asset    Size  Chunks             Chunk Names
-ethjs-signer.min.js  164 kB       0  [emitted]  main
-  [37] multi main 28 bytes {0} [built]
-    + 37 hidden modules
+Time: 7583ms
+              Asset    Size  Chunks             Chunk Names
+ethjs-signer.min.js  181 kB       0  [emitted]  main
+  [44] multi main 28 bytes {0} [built]
+    + 44 hidden modules
 ```
 
 ## Other Awesome Modules, Tools and Frameworks

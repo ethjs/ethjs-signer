@@ -1,6 +1,6 @@
 {
   "name": "ethjs-signer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple module for signing Ethereum transactions.",
   "main": "lib/index.js",
   "files": [
@@ -95,7 +95,7 @@
     }
   },
   "dependencies": {
-    "ethjs-sha3": "0.1.2",
+    "js-sha3": "0.5.5",
     "rlp": "2.0.0",
     "strip-hex-prefix": "1.0.0",
     "number-to-bn": "1.1.0",

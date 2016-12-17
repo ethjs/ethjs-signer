@@ -1,6 +1,6 @@
 const rlp = require('rlp');
 const elliptic = require('elliptic');
-const sha3 = require('ethjs-sha3');
+const keccak256 = require('js-sha3').keccak_256;
 const secp256k1 = new (elliptic.ec)('secp256k1'); // eslint-disable-line
 const stripHexPrefix = require('strip-hex-prefix');
 const numberToBN = require('number-to-bn');
@@ -50,7 +50,7 @@ function recover(rawTx, v, r, s) {
     raw[fieldIndex] = signedTransaction[fieldIndex];
   });
 
-  const publicKey = secp256k1.recoverPubKey(sha3(rlp.encode(raw), true), { r, s }, v - 27);
+  const publicKey = secp256k1.recoverPubKey((new Buffer(keccak256(rlp.encode(raw)), 'hex')), { r, s }, v - 27);
   return (new Buffer(publicKey.encode('hex', false), 'hex')).slice(1);
 }
 
@@ -103,7 +103,7 @@ function sign(transaction, privateKey, toObject) {
 
   // private key is not stored in memory
   const signature = secp256k1.keyFromPrivate(new Buffer(privateKey.slice(2), 'hex'))
-                    .sign(sha3(rlp.encode(raw), true), { canonical: true });
+                    .sign((new Buffer(keccak256(rlp.encode(raw)), 'hex')), { canonical: true });
 
   raw.push(new Buffer([27 + signature.recoveryParam]));
   raw.push(bnToBuffer(signature.r));
