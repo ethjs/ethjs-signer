@@ -50,7 +50,7 @@ npm install --save ethjs-signer
 ```js
 const HttpProvider = require('ethjs-provider-http');
 const Eth = require('ethjs-query');
-const eth = new Eth(HttpProvider('http://localhost:8545'));
+const eth = new Eth(new HttpProvider('http://localhost:8545'));
 const sign = require('ethjs-signer').sign;
 
 const address = '0x0F6af8F8D7AAD198a7607C96fb74Ffa02C5eD86B';
