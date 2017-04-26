@@ -62,6 +62,8 @@ eth.getTransactionCount(address).then((nonce) => {
     to: '0xce31a19193d4b23f4e9d6163d7247243bAF801c3',
     value: 300000,
     gas: new BN('43092000'),
+    // when sending a raw transactions it's necessary to set the gas price, currently 0.00000002 ETH
+    gasPrice: new BN('20000000000'),
     nonce: nonce,
   }, privateKey)).then((txHash) => {
     console.log('Transaction Hash', txHash);
