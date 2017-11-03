@@ -39,6 +39,8 @@
 
 A simple Ethereum signing and recovery utility.
 
+This module does not have EIP155 replay protection, do not use until it is upgraded.
+
 ## Install
 
 ```
