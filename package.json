@@ -99,7 +99,7 @@
     "rlp": "2.0.0",
     "strip-hex-prefix": "1.0.0",
     "number-to-bn": "1.1.0",
-    "elliptic": "6.3.2"
+    "elliptic": "6.5.3"
   },
   "devDependencies": {
     "babel-cli": "6.18.0",
